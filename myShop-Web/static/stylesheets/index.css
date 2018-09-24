@@ -1,0 +1,19 @@
+@font-face {
+    font-family: LeagueSpartan;
+    src: url(fonts/LeagueSpartan-Bold.otf);
+}
+
+html{
+    background-image: linear-gradient(to right,#FF4141,#DB901F);
+}
+
+.leaguespartan {
+    
+    font-family: LeagueSpartan;
+    text-shadow: 2px 2px #000000;
+}
+.maintitle {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
