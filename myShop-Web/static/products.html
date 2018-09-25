@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,53 +8,64 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="search-header element-shadow" id="search-header">
 
-
-        <section class="search-module d-flex flex-column justify-content-between">
-
-            <section class="login-form ">
-                <form id="search">
-                    <div class="input-container">
-                        <input type="text" name="searchbar" placeholder="Search products in store" maxlength="24" id="search">
-                        <img src="stylesheets/images/is_serch.png" class="img">
-
-                    </div>
-                </form>
+        <section class="d-flex flex-row justify-content-between">
+            <section class="store-details" id="store-details">
+                <div class="store-name">LIDL</div>
+                <hr class="horizontal-line">
+                <div class="store-city">Budapest</div>
+                <hr class="horizontal-line">
+                <div class="store-street">Szupi utca 7.</div>
             </section>
+            <section class="search-module d-flex flex-column justify-content-between flex-grow-1">
 
-            <section class="d-flex flex-row justify-content-between 
+                <section class="login-form ">
+                    <form id="search">
+                        <div class="input-container">
+                            <input type="text" name="searchbar" placeholder="Search products in store" maxlength="24"
+                                id="search">
+                            <img src="stylesheets/images/is_serch.png" class="img">
+
+                        </div>
+                    </form>
+                </section>
+
+                <section class="d-flex flex-row justify-content-between 
             align-items-center">
 
-                <section>
-                
-                </section>
+                    <section>
 
-                <section class="d-flex flex-column justify-content-around">
-
-                    <section class="title text-shadow">
-                        PRODUCTS
                     </section>
 
-                    <section class="detail-title">
-                        (1463 products)
+                    <section class="d-flex flex-column justify-content-around">
+
+                        <section class="title text-shadow">
+                            PRODUCTS
+                        </section>
+
+                        <section class="detail-title">
+                            (1463 products)
+                        </section>
+
+                    </section>
+
+                    <section>
+                        <button type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+
+
                     </section>
 
                 </section>
-
-                <section>
-                        <button type="button" class="btn btn-info btn-circle btn-xl"
-                        value="Submit">
-                        <i class="glyphicon glyphicon-plus"></i>
-                        </button> 
-                        
-                       
-                </section>
+            </section>
+            <section>
 
             </section>
         </section>
@@ -77,28 +87,388 @@
                 </tr>
             </thead>
             <tbody class="rows">
-                    <tr>
-                            <th scope="row">0</th>
-                            <td>Kenyér</td>
-                            <td>Pékáru</td>
-                            <td>Kenyér</td>
-                            <td>500</td>
-                            <td>399</td>
-                            <td>
-                                <div class="d-flex flex-row bd-highlight">
-                                    
-        
-                                    <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
-                                        <img src="stylesheets/images/edit.png" class="button-img">
-                                    </button>
-                                    <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
-                                        value="Submit">
-                                        <img src="stylesheets/images/trash.png" class="button-img">
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>iPhone XS Max</td>
+                    <td>Túlárazott</td>
+                    <td>Sz*r</td>
+                    <td>212</td>
+                    <td>575999</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Macbook Pro</td>
+                    <td>Kütyük</td>
+                    <td>Laptop</td>
+                    <td>867</td>
+                    <td>499999</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Kenyér</td>
+                    <td>Pékáru</td>
+                    <td>Kenyér</td>
+                    <td>500</td>
+                    <td>399</td>
+                    <td>
+                        <div class="d-flex flex-row bd-highlight">
+                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                                <img src="stylesheets/images/edit.png" class="button-img">
+                            </button>
+                            <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
+                                value="Submit">
+                                <img src="stylesheets/images/trash.png" class="button-img">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+
             </tbody>
         </table>
 
@@ -112,19 +482,21 @@
             const distanceY = window.pageYOffset || document.documentElement.scrollTop,
                 shrinkOn = 200,
                 headerEl = document.getElementById('search-header');
+                storeDetailsEl = document.getElementById('store-details');
+
 
             if (distanceY > shrinkOn) {
                 headerEl.classList.add("shrink");
+                storeDetailsEl.classList.add("move-out");
             } else {
                 headerEl.classList.remove("shrink");
+                storeDetailsEl.classList.remove("move-out");
             }
         }
 
         window.addEventListener('scroll', resizeHeaderOnScroll);
 
-        document.getElementById("detailsButton").onclick = function () {
-        location.href = "products.html";
-         };
+
     </script>
 
 </body>
