@@ -1,0 +1,152 @@
+@font-face {
+    font-family: LeagueSpartan;
+    src: url(fonts/LeagueSpartan-Bold.otf);
+}
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(fonts/Montserrat-Light.otf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(fonts/Montserrat-Bold.otf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(fonts/Montserrat-Regular.otf);
+}
+@font-face {
+    font-family: Montserrat-ExtralightItalic;
+    src: url(fonts/Montserrat-ExtraLightItalic.otf);
+}
+@font-face {
+    font-family: Montserrat-Extralight;
+    src: url(fonts/Montserrat-ExtraLight.otf);
+}
+
+
+.text-shadow{
+    text-shadow: 1px 1px 6px #000000;
+}
+.element-shadow{
+    box-shadow: 1px 1px 10px #000000;
+}
+
+header{
+    background-image: linear-gradient(to right,#FF4141,#DB901F);
+    height: 144px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.title {
+    color: white;
+    font-size: 58px;
+    margin:auto;
+    font-family: LeagueSpartan;
+    vertical-align: middle;
+}
+
+.label{
+    font-family: Montserrat-Bold;
+    font-size: 50px;
+    margin-left: 30px;
+}
+
+.input-fields{
+    margin: 60px;
+}
+
+.input-container{
+    max-width: 870px;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+.field{
+    
+}
+
+.input-form input[type="text"],
+.input-form select {
+   
+    font-family: Montserrat-Bold;
+    background: rgba(255,255,255,.1);
+    border: none;
+    vertical-align: middle;
+    
+    border-radius: 30px;
+    height: 67px;
+    font-size: 30px;
+    margin-left: 20px;
+    
+    outline: 0;
+    padding: 10px;
+    padding-left: 20px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: rgb(245, 244, 244);
+    color:rgb(85, 84, 84);
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000;
+   
+}
+
+.button{
+    font-family: Montserrat-Bold;
+    width: 40%;
+    border-radius: 30px;
+    height: 67px;
+    border: 0px;
+    background-color: #FF4141;
+    font-size: 35px;
+    color: white;
+    display: inline-block;
+    /* margin-bottom: 0; */
+    box-shadow: 0 2px #999;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .button:active {
+    background-color: #DB5252;
+    box-shadow: 0 0px #666;
+    transform: translateY(2px);
+  }

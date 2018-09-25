@@ -56,7 +56,7 @@
                     </section>
 
                     <section>
-                        <button type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
+                        <button id="addButton" type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
 
@@ -496,6 +496,11 @@
 
         window.addEventListener('scroll', resizeHeaderOnScroll);
 
+        document.getElementById("editButton").onclick = function () {
+        location.href = "product_edit.html";};
+        
+        document.getElementById("addButton").onclick = function () {
+        location.href = "product_add.html";};
 
     </script>
 
