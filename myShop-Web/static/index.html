@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html
+lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Login</title>
-    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/login-styles.css">
     <link rel="stylesheet" href="stylesheets/login-form.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     
@@ -28,8 +29,8 @@
                 <form id="login">
                        <div class ="input-container">
                                 <input type="text" name="username" placeholder="Username"
-                                maxlength="10">
-                               <img src="stylesheets/images/ic_username.png" class="img">
+                                maxlength="10" id="username">
+                              
                         </div>
                         <div class ="input-container">
                                 <input type="password" name="password" placeholder="Password"
@@ -40,7 +41,7 @@
                         </div>
                         
                 </form>
-                <button type="button" class="button element-shadow" form="login" value="Submint"><span>Login </span></button>
+                <button id="loginButton" type="button" class="button element-shadow" form="login" value="Submit"><span>Login </span></button>
                        
                         
             
@@ -53,10 +54,11 @@
 </body>
 
 <script>
+    //  show and hide password to eyebutton click
        function showHidePassword() {
     var pass = document.getElementById("password");
     var image = document.getElementById("img");
-    if(pass.value != ""){
+    if(pass.value !== ""){
     if (pass.type === "password") {
         pass.type = "text";
         image.src = "stylesheets/images/ic_password_revealed.png";
@@ -65,6 +67,15 @@
         image.src = "stylesheets/images/ic_password_hided.png";
     }
     }
+
+    //authentication on button click
+    document.getElementById("loginButton").onclick = function () {
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        if(username.value=="admin" && password.value=="admin"){
+        location.href = "stores.html";
+        }
+    };
 }
         </script>
 </html>
