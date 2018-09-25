@@ -27,12 +27,16 @@
                
                 <form id="login">
                        <div class ="input-container">
-                                <input type="text" name="username" placeholder="Username">
+                                <input type="text" name="username" placeholder="Username"
+                                maxlength="10">
                                <img src="stylesheets/images/ic_username.png" class="img">
                         </div>
                         <div class ="input-container">
-                                <input type="password" name="password" placeholder="Password">
-                               <img src="stylesheets/images/ic_password.png" class="img">
+                                <input type="password" name="password" placeholder="Password"
+                                id ="password">
+                               <img src="stylesheets/images/ic_password_hided.png" class="img password-reveal"
+                               onclick="showHidePassword()"
+                               id="img">
                         </div>
                         
                 </form>
@@ -47,4 +51,20 @@
     
     
 </body>
+
+<script>
+       function showHidePassword() {
+    var pass = document.getElementById("password");
+    var image = document.getElementById("img");
+    if(pass.value != ""){
+    if (pass.type === "password") {
+        pass.type = "text";
+        image.src = "stylesheets/images/ic_password_revealed.png";
+    } else {
+        pass.type = "password";
+        image.src = "stylesheets/images/ic_password_hided.png";
+    }
+    }
+}
+        </script>
 </html>
