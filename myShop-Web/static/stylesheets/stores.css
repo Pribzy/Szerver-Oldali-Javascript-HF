@@ -1,42 +1,14 @@
-@font-face {
-    font-family: LeagueSpartan;
-    src: url(fonts/LeagueSpartan-Bold.otf);
-}
-@font-face {
-    font-family: Montserrat-Light;
-    src: url(fonts/Montserrat-Light.otf);
-}
-@font-face {
-    font-family: Montserrat-Bold;
-    src: url(fonts/Montserrat-Bold.otf);
-}
 
-@font-face {
-    font-family: Montserrat-Regular;
-    src: url(fonts/Montserrat-Regular.otf);
-}
-@font-face {
-    font-family: Montserrat-ExtralightItalic;
-    src: url(fonts/Montserrat-ExtraLightItalic.otf);
-}
 
-.search-header{
-    background-image: linear-gradient(to right,#FF4141,#DB901F);
-    height: 290px;
-    padding-top: 20px;
-    
-    z-index: 2;
-    width: 100%;
-    position: fixed;
-    top:0;
-    transition: all 0.3s;
-}
 .shrink{
    margin-top: -130px;
     
  
 }
+
+
 .main-content{
+    
     margin-top: 304px;
     text-align: center;
     margin-left: 80px;

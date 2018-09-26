@@ -1,0 +1,24 @@
+#addButton{
+    position: absolute;
+    right: 2%;
+    bottom: 30px;
+}
+.main-content{
+    
+    margin-top: 304px;
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.search-header{
+    background-image: linear-gradient(to right,#FF4141,#DB901F);
+    height: 290px;
+    padding-top: 20px;
+    
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+    top:0;
+    transition: all 0.3s;
+}
