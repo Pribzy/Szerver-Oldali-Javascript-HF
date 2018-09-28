@@ -3,6 +3,14 @@
     right: 2%;
     bottom: 30px;
 }
+
+.text-shadow{
+    text-shadow: 1px 1px 6px #000000;
+}
+.element-shadow{
+    box-shadow: 1px 1px 10px #000000;
+}
+
 .main-content{
     
     margin-top: 304px;
@@ -13,12 +21,331 @@
 
 .search-header{
     background-image: linear-gradient(to right,#FF4141,#DB901F);
-    height: 290px;
+    height:23%;
     padding-top: 20px;
-    
     z-index: 2;
     width: 100%;
     position: fixed;
     top:0;
     transition: all 0.3s;
 }
+
+.store-details{
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.shrink{
+    margin-top: -130px;
+ }
+
+ .input-container{
+    max-width: 870px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 45px;
+}
+
+.store-name{
+    color: white;
+    font-family: LeagueSpartan;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    }
+    .store-city{
+        color: white;
+        font-family: Montserrat-Extralight;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    }
+    .store-street{
+        color: white;
+        font-family: Montserrat-ExtralightItalic;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    }
+
+    .title {
+        color: white;
+        font-size: 4em;
+        margin:auto;
+        font-family: LeagueSpartan;
+        
+    }
+
+    .detail-title{
+        color: white;
+        font-size: 1.5em;
+        margin: auto;
+        font-family: Montserrat-ExtralightItalic;
+        text-align: center;
+    }
+
+    .login-form{
+        max-width: 870px;
+        width :100%;
+        margin: 10px auto;
+        padding: 0px 50px 0px;
+        font-family: Montserrat-Regular;
+        
+    }
+
+.login-form input[type="text"],
+.login-form select {
+   
+    font-family: Montserrat-Regular;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 30px;
+    height: 67px;
+    font-size: 30px;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    padding-left: 80px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: rgb(245, 244, 244);
+    color:#5D5D5D;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    
+   
+}
+
+.button-img {
+    width: 25px;
+    height: 25px;
+    
+}
+
+.search-img {
+    width: 35px;
+    height: 35px;
+    position:absolute;
+    bottom:15px;
+    left: 30px;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    font-size: 30px;
+    line-height: 0;
+    border-radius: 35px;
+    background-color: #5BA2DF;
+
+  }
+
+  .d-flex.flex-row.justify-content-between.align-items-center{
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  /* SHOW Button */
+.details-button{
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-bottom: 0;
+    font-family: LeagueSpartan;
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #288BD6;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    /* margin-bottom: 0; */
+    box-shadow: 0 2px #999;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    border-radius: 10px;
+    cursor:pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000;
+}
+
+
+
+
+.details-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .details-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .details-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .details-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  .details-button:active {
+    background-color: rgb(59, 161, 240);
+    box-shadow: 0 0px #666;
+    transform: translateY(2px);
+  }
+
+/*   Other Buttons */
+.delete-button{
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-bottom: 0;
+    font-family: LeagueSpartan;
+    border-radius: 10px;
+    border: #000000;
+    height: 50px;
+    width: 80px;
+    background-color: #C21A1A;
+    font-size: 24px;
+    color: white;
+    display: block;
+    /* margin-bottom: 0; */
+    box-shadow: 0 2px #999;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000;
+    
+}
+.delete-button:active {
+    background-color: rgb(219, 36, 36);
+    box-shadow: 0 0px #666;
+    transform: translateY(2px);
+  }
+
+
+.edit-button{
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-bottom: 0;
+    font-family: LeagueSpartan;
+    border-radius: 10px;
+    border: #000000;
+    height: 50px;
+    width: 80px;
+    background-color: #6824AB;
+    font-size: 24px;
+    color: white;
+    display: block;
+    /* margin-bottom: 0; */
+    box-shadow: 0 2px #999;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000;
+}
+
+.edit-button:active {
+    background-color: rgb(127, 49, 206);
+    box-shadow: 0 0px #666;
+    transform: translateY(2px);
+  }
+
+/*   Table attributes */
+
+table.table.table-striped .rows td{
+    vertical-align: middle;
+}
+table.table.table-striped .rows th{
+    vertical-align: middle;
+    font-family: Montserrat-Bold;
+}
+
+table.table.table-striped th{
+    font-family: Montserrat-Bold;
+    font-size: 2em;
+    vertical-align: middle;
+}
+table.table.table-striped {
+    table-layout: fixed;
+}
+
+.rows{
+    font-family: Montserrat-Regular;
+    font-size: 1.8em;
+    overflow: auto;
+    
+}
+/* for stores */
+.row-img {
+    width: 47px;
+    height: 47px;
+    
+}
+
+.row-id{
+    font-family: Montserrat-Bold;
+}
+
+
+.row-rate{
+    color: #39B14D;
+    font-family: Montserrat-Bold;
+}
+
+/* for products  */
+
+.store-details{
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.horizontal-line{
+   
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 3px;
+    width: 374px;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.search-module{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100%;
+    
+}
+
+.move-out{
+    margin-top: -130px;
+ }
