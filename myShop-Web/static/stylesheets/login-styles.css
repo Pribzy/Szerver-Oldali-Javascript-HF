@@ -1,90 +1,88 @@
 @font-face {
-    font-family: LeagueSpartan;
-    src: url(fonts/LeagueSpartan-Bold.otf);
+  font-family: LeagueSpartan;
+  src: url(fonts/LeagueSpartan-Bold.otf);
 }
 @font-face {
-    font-family: Montserrat-Light;
-    src: url(fonts/Montserrat-Light.otf);
+  font-family: Montserrat-Light;
+  src: url(fonts/Montserrat-Light.otf);
 }
 @font-face {
-    font-family: Montserrat-Bold;
-    src: url(fonts/Montserrat-Bold.otf);
+  font-family: Montserrat-Bold;
+  src: url(fonts/Montserrat-Bold.otf);
 }
 
 @font-face {
-    font-family: Montserrat-Regular;
-    src: url(fonts/Montserrat-Regular.otf);
+  font-family: Montserrat-Regular;
+  src: url(fonts/Montserrat-Regular.otf);
 }
 
-html{
-    background-image: linear-gradient(to right,#FF4141,#DB901F);
+html {
+  background-image: linear-gradient(to right, #ff4141, #db901f);
 }
 
-body{
-    background-image: linear-gradient(to right,#FF4141,#DB901F);
-    padding-bottom:1px; 
+body {
+  background-image: linear-gradient(to right, #ff4141, #db901f);
+  padding-bottom: 1px;
 }
 
 .leaguespartan {
-    font-family: LeagueSpartan;
+  font-family: LeagueSpartan;
 }
 .montserrat-light {
-    font-family: Montserrat-Light;
+  font-family: Montserrat-Light;
 }
 .montserrat-bold {
-    font-family: Montserrat-Bold;
+  font-family: Montserrat-Bold;
 }
 .maintitle {
-    color: white;
-    font-size: 120px;
-    text-align: center;
-    margin:50px 0 0 0;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  margin: 20px 0 0 0;
 }
 
 .sidetitle {
-    color: white;
-    font-size: 38px;
-    text-align: center;
-    margin:10px 0 0 0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0 0 0;
 }
 
-.logintitle{
-    font-size: 58px;
-    text-align: center;
-    margin:38px 0 0 0;
-    letter-spacing: 6px;
-    
+.logintitle {
+  font-size: 34px;
+  text-align: center;
+  margin: 20px 0 0 0;
+  letter-spacing: 6px;
 }
 
-.text-shadow{
-    text-shadow: 1px 1px 6px #000000;
+.text-shadow {
+  text-shadow: 1px 1px 6px #000000;
 }
-.element-shadow{
-    box-shadow: 1px 1px 10px #000000;
-}
-
-.input-holder{
-    display: flex;
-    justify-content: center;
+.element-shadow {
+  box-shadow: 1px 1px 10px #000000;
 }
 
-.input{
-    border-radius: 35px;
-    background:white;
-    
-    width: 506px;
-    height: 522px; 
-    margin-top: 30px;
-    display: flex; 
-    flex-direction: column;
-}
-.horizontal-line{
-   
-    color: #707070;
-    background-color: #707070;
-    height: 3px;
-    width: 374px;
-    align-content: center;
+.input-holder {
+  display: flex;
+  justify-content: center;
 }
 
+.input {
+  border-radius: 35px;
+  background: white;
 
+  width: 350px;
+  height: 330px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.horizontal-line {
+  color: #707070;
+  background-color: #707070;
+  height: 1.5px;
+  width: 150px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-content: center;
+}
