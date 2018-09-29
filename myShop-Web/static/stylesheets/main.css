@@ -21,7 +21,7 @@
 .search-header {
   background-image: linear-gradient(to right, #ff4141, #db901f);
   height: 180px;
-  padding-top: 1%;
+  padding-top: 20px;
   z-index: 2;
   width: 100%;
   position: fixed;
