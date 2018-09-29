@@ -151,7 +151,7 @@
   border-radius: 10px;
   height: 40px;
   background-color: #288bd6;
-  font-size: 12px;
+  font-size: 15px;
   color: white;
   display: inline-block;
   /* margin-bottom: 0; */
@@ -184,7 +184,7 @@
 }
 
 .details-button:hover span {
-  padding-right: 12px;
+  padding-right: 15px;
 }
 
 .details-button:hover span:after {
@@ -274,7 +274,7 @@ table.table.table-striped .rows th {
 
 table.table.table-striped th {
   font-family: Montserrat-Bold;
-  font-size: 17px;
+  font-size: 20px;
   vertical-align: middle;
 }
 table.table.table-striped {
@@ -283,13 +283,13 @@ table.table.table-striped {
 
 .rows {
   font-family: Montserrat-Regular;
-  font-size: 17px;
+  font-size: 20px;
   overflow: auto;
 }
 /* for stores */
 .row-img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 .row-id {
@@ -328,5 +328,5 @@ table.table.table-striped {
 }
 
 .move-out {
-  margin-top: -130px;
+  margin-top: -90px;
 }
