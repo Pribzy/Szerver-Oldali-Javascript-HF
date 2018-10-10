@@ -1,3 +1,4 @@
+
 MW-k:
     -renderMW(var html) : Megjeleníti a paraméterben kapott HTML oldalt
     -checkLoginMW: Megnézi, hogy a POST-ban jött-e login adat, és ha az egyenló admin-admin-nal, akkor a felhasználó belépett, és akkor átirányítjuk a Boltok listájához, ha nem, hibával tér vissza
