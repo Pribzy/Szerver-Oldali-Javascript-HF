@@ -80,3 +80,9 @@ Route-oknál figyelni: Olyan route-okat írjunk, amik egyedi oldalakra navigáln
 Middleware-ek:
 ==========================================================
 Implementálni kell a függvényeket, és kommentekben, hogy miket csinál
+
+
+//
+
+Lehetnek különálló routing mappák (pl: admin,outside)
+Middleware-ek különböző fájlokban
