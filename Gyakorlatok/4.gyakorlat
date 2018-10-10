@@ -1,0 +1,82 @@
+MW-k:
+    -renderMW(var html) : Megjeleníti a paraméterben kapott HTML oldalt
+    -checkLoginMW: Megnézi, hogy a POST-ban jött-e login adat, és ha az egyenló admin-admin-nal, akkor a felhasználó belépett, és akkor átirányítjuk a Boltok listájához, ha nem, hibával tér vissza
+    -loginErrorMW: ellenőrzi, hogy hibás bejelentkezés volt-e,ha igen, akkor ezt az infót átadja a rendernek
+    
+    -authMW: Megnézi, hogy a felhasználó be van-e jelentkezve
+    
+    -getAllStoresMW: Visszatér a rendszer összes boltjával
+    -getOneStoreMW: Az URL paraméterben megadott nagymama adatait adja vissza
+    -saveStoreMW:
+    -deleteStoreMW:A már betöltött boltot törli, majd visszairányít a boltok listája
+    ....
+    -logoutMW:
+
+Routing:
+==========================================================
+LOGIN:
+
+/?error - Hibaoldal
+GET     / - Login
+    -loginErrorMW
+    -renderMW("index.html") 
+
+POST    /login - bejelentkezés
+    -checkLoginMW
+--------------------------
+STORES:
+GET /stores - Stores List
+    -authMW
+    -getAllStoresMW
+    -renderMW("stores.html")
+
+GET /stores/:storeId/edit -  Edit Store
+    -authMW
+    -getOneStore
+    -renderMW("product_edit.html")
+
+POST /stores/:storeId/edit (Azért kell POST, mert menteni kell az adatokat, jelezni kell a szervernek)
+    -authMW
+    -getOneStore
+    -saveStoreMW
+
+GET /stores/:storeId/delete -  Delete Store (nem oldal)
+    -authMW
+    -renderMW("stores.html")
+   
+POST /stores/:storeId/delete 
+    -authMW
+    -deleteStoreMW
+
+GET /stores/new - New Store
+    -authMW
+    -getOneStore
+    -renderMW("product_new.html")
+
+POST /stores/new 
+    -authMW
+    -saveStoreMW
+
+--------------------------
+PRODUCTS:
+GET /products/:storeId - Products List
+
+GET /products/:storeId/new - New Product
+POST /products/:storeId/new 
+
+GET /products/:storeId/:productId/edit - Product Edit
+POST /products/:storeId/:productId/edit - Product Edit
+
+GET /products/:storeId/:productId/delete - Product Delete
+POST /products/:storeId/:productId/delete - Product Delete
+--------------------------
+GET /logout - Logout
+    -authMW
+    -logoutMW
+
+==========================================================
+Route-oknál figyelni: Olyan route-okat írjunk, amik egyedi oldalakra navigálnak minket
+
+Middleware-ek:
+==========================================================
+Implementálni kell a függvényeket, és kommentekben, hogy miket csinál
