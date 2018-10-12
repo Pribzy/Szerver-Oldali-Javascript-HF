@@ -1,5 +1,5 @@
 /**
-* Visszatér a rendszer összes termékével
+* Visszatér a rendszer összes termékével,ami az adott id-jú bolthoz tartozik
 */
 module.exports = function (objectrepository) {
 
