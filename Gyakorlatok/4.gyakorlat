@@ -31,6 +31,14 @@ GET /stores - Stores List
     -getAllStoresMW
     -renderMW("stores.html")
 
+
+
+  GET /stores/:searchedKeyword -  Searched
+    -authMW
+    -getSearchedStores
+    -renderMW("product_edit.html")  
+
+
 GET /stores/:storeId/edit -  Edit Store
     -authMW
     -getOneStore
@@ -38,7 +46,6 @@ GET /stores/:storeId/edit -  Edit Store
 
 POST /stores/:storeId/edit (Azért kell POST, mert menteni kell az adatokat, jelezni kell a szervernek)
     -authMW
-    -getOneStore
     -saveStoreMW
 
 GET /stores/:storeId/delete -  Delete Store (nem oldal)
