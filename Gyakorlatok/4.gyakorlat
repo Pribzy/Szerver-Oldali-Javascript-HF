@@ -31,8 +31,6 @@ GET /stores - Stores List
     -getAllStoresMW
     -renderMW("stores.html")
 
-
-
   GET /stores/:searchedKeyword -  Searched
     -authMW
     -getSearchedStores
