@@ -1,5 +1,5 @@
 /**
-* Visszaadja azokat a termékeket, amelyek megfelelnek a keresési eredménynek, amelyet az URL-ből kap
+* Visszaadja azokat a termékeket, amelyek megfelelnek a keresési kulcsszónaks, amelyet az URL-ből kap
 */
 module.exports = function (objectrepository) {
 
