@@ -22,14 +22,14 @@ module.exports = function(app) {
     app.GET('/products/:storeId/:searchedKeyword',
     autheticationMW(objectRepository),
     getSearchedProductsMW(objectRepository),
-    renderMW(objectRepository,"stores.html")
+    renderMW(objectRepository,"products.html")
     );
     //------------------------------
     //Termék módosítása
     app.GET('/products/:storeId/:productId/edit',
     autheticationMW(objectRepository),
     getOneProductMW(objectRepository),
-    renderMW(objectRepository,"store_edit.html")
+    renderMW(objectRepository,"product_edit.html")
     );
     app.POST('/products/:storeId/:productId/edit',
     autheticationMW(objectRepository),
@@ -39,7 +39,7 @@ module.exports = function(app) {
     //Termék törlése
     app.GET('/products/:storeId/:productId/delete',
     autheticationMW(objectRepository),
-    renderMW(objectRepository,"stores.html")
+    renderMW(objectRepository,"products.html")
     );
     app.POST('/products/:storeId/:productId/delete',
     autheticationMW(objectRepository),
@@ -50,7 +50,7 @@ module.exports = function(app) {
     app.GET('/products/:storeId/new',
     autheticationMW(objectRepository),
     getOneProductMW(objectRepository),
-    renderMW(objectRepository,"store_add.html")
+    renderMW(objectRepository,"product_add.html")
     );
     app.POST('/products/:storeId/new',
     autheticationMW(objectRepository),
