@@ -1,0 +1,148 @@
+<% include header_dataManipulate %>
+
+ <header class="search-header element-shadow d-flex flex-row justify-content-between 
+        align-items-center">
+        <section class="title text-shadow">EDIT STORE</section>
+    </header>
+
+
+    <article class="field">
+        <section class="input-fields d-flex flex-row justify-content-center  align-items-center">
+
+            <section class="label">
+                Name:
+            </section>
+            <section class="input-form ">
+                <form id="search">
+                    <div class="input-container">
+                        <input type="text" name="searchbar" value="Lidl" maxlength="24" id="search">
+
+
+                    </div>
+                </form>
+            </section>
+
+        </section>
+    </article>
+
+    <article class="field">
+        <section class="input-fields d-flex flex-row justify-content-center  align-items-center">
+
+            <section class="label">
+                City:
+            </section>
+            <section class="input-form ">
+                <form id="search">
+                    <div class="input-container">
+                        <input type="text" name="searchbar" value="Budapest" maxlength="24" id="search">
+
+
+                    </div>
+                </form>
+            </section>
+
+        </section>
+    </article>
+
+    <article class="field">
+        <section class="input-fields d-flex flex-row justify-content-center  align-items-center">
+
+            <section class="label">
+                Street:
+            </section>
+            <section class="input-form ">
+                <form id="search">
+                    <div class="input-container">
+                        <input type="text" name="searchbar" value="Szupi utca 7." maxlength="24" id="search">
+
+
+                    </div>
+                </form>
+            </section>
+
+        </section>
+    </article>
+
+    <article class="field">
+        <section class="input-fields d-flex flex-row justify-content-center  align-items-center">
+
+            <section class="label">
+                Rating:
+            </section>
+            <section class="input-form ">
+                <form id="search">
+                    <div class="input-container">
+                        <input type="text" name="searchbar" value="4.7" maxlength="24" id="search">
+
+
+                    </div>
+                </form>
+            </section>
+
+
+        </section>
+    </article>
+
+    <article class="field">
+        <section class="input-fields d-flex flex-row justify-content-center  align-items-center">
+
+            <section class="label">
+                Type:
+            </section>
+
+            <section class="d-flex flex-column  align-items-center">
+
+                <section class="d-flex flex-row">
+
+                    <section class="img">
+                        <input type="radio" name="type" id="0" class="input-hidden" />
+                        <label for="0">
+                            <img src="/images/laptop.png" alt="I'm sad" />
+                        </label>
+                    </section>
+                    <section class="img">
+                        <input type="radio" name="type" id="1" class="input-hidden" />
+                        <label for="1">
+                            <img src="/images/chop.png" alt="I'm sad" />
+                        </label>
+                    </section>
+                    <section class="img">
+                        <input type="radio" name="type" id="2" class="input-hidden" checked="checked"/>
+                        <label for="2">
+                            <img src="/images/ic_groceries.png" alt="I'm sad" />
+                        </label>
+                    </section>
+                </section>
+
+                <section class="d-flex flex-row" style="margin-top:20px">
+
+                        <section class="img">
+                            <input type="radio" name="type" id="3" class="input-hidden" />
+                            <label for="3">
+                                <img src="/images/fish.png" alt="I'm sad" />
+                            </label>
+                        </section>
+                        <section class="img">
+                            <input type="radio" name="type" id="4" class="input-hidden" />
+                            <label for="4">
+                                <img src="/images/bread.png" alt="I'm sad" />
+                            </label>
+                        </section>
+                        <section class="img">
+                            <input type="radio" name="type" id="5" class="input-hidden" />
+                            <label for="5">
+                                <img src="/images/carrot.png" alt="I'm sad" />
+                            </label>
+                        </section>
+                    </section>
+
+            </section>
+
+        </section>
+    </article>
+    <article class="d-flex flex-row justify-content-center">
+        <button id="saveButton" type="button" class="button element-shadow" form="login" value="Submit"><span>SAVE
+                CHANGES</span></button>
+    </article>
+
+<% include footer %>
