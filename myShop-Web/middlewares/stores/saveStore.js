@@ -7,6 +7,8 @@ var requireOption = require("../common").requireOption;
  * Majd visszatér a boltok listája oldalra
  */
 module.exports = function(objectrepository) {
+  var storeModel = requireOption(objectrepository, "storeModel");
+
   return function(req, res, next) {
     return next();
   };

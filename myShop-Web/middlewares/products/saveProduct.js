@@ -7,6 +7,8 @@ var requireOption = require("../common").requireOption;
  * Majd visszatér a termékek listája oldalra
  */
 module.exports = function(objectrepository) {
+  var productModel = requireOption(objectrepository, "productModel");
+
   return function(req, res, next) {
     return next();
   };
