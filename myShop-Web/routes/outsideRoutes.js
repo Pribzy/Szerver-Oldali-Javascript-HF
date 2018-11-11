@@ -8,17 +8,17 @@ const autheticationMW = require("../middlewares/generic/authentication");
 module.exports = function(app) {
   const objectRepository = {};
 
-    app.GET('/',
+  app.get(
+    "/",
     loginErrorMW(objectRepository),
-    renderMW(objectRepository,"index.html")
-    );
+    renderMW(objectRepository, "login")
+  );
 
-    app.GET('/logout',
+  app.get(
+    "/logout",
     autheticationMW(objectRepository),
     logoutMW(objectRepository)
-    );
+  );
 
-    app.POST('/login',
-    checkLoginMW(objectRepository)
-    );
+  app.post("/login", checkLoginMW(objectRepository));
 };

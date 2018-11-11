@@ -10,51 +10,59 @@ const saveStoreMW = require("../middlewares/stores/saveStore");
 
 module.exports = function(app) {
   const objectRepository = {};
-    //------------------------------
-    //Boltok listája
-    app.GET('/stores',
+  //------------------------------
+  //Boltok listája
+  app.get(
+    "/stores",
     autheticationMW(objectRepository),
     getAllStoreMW(objectRepository),
-    renderMW(objectRepository,"stores.html")
-    );
-    //------------------------------
-    //Boltok közötti keresés 
-    app.GET('/stores/:searchedKeyword',
+    renderMW(objectRepository, "stores")
+  );
+  //------------------------------
+  //Boltok közötti keresés
+  app.get(
+    "/stores/:searchedKeyword",
     autheticationMW(objectRepository),
     getSearchedStoresMW(objectRepository),
-    renderMW(objectRepository,"stores.html")
-    );
-    //------------------------------
-    //Bolt módosítása
-    app.GET('/stores/:storeId/edit',
+    renderMW(objectRepository, "stores")
+  );
+  //------------------------------
+  //Bolt módosítása
+  app.get(
+    "/stores/:storeId/edit",
     autheticationMW(objectRepository),
     getOneStoreMW(objectRepository),
-    renderMW(objectRepository,"store_edit.html")
-    );
-    app.POST('/stores/:storeId/edit',
+    renderMW(objectRepository, "store_edit")
+  );
+  app.post(
+    "/stores/:storeId/edit",
     autheticationMW(objectRepository),
-    saveStoreMW(objectRepository),
-    );
-    //------------------------------
-    //Bolt törlése
-    app.GET('/stores/:storeId/delete',
+    saveStoreMW(objectRepository)
+  );
+  //------------------------------
+  //Bolt törlése
+  app.get(
+    "/stores/:storeId/delete",
     autheticationMW(objectRepository),
-    renderMW(objectRepository,"stores.html")
-    );
-    app.POST('/stores/:storeId/delete',
+    renderMW(objectRepository, "stores")
+  );
+  app.post(
+    "/stores/:storeId/delete",
     autheticationMW(objectRepository),
-    deleteStoreMW(objectRepository),
-    );
-    //------------------------------
-    //Bolt hozzáadása
-    app.GET('/stores/new',
+    deleteStoreMW(objectRepository)
+  );
+  //------------------------------
+  //Bolt hozzáadása
+  app.get(
+    "/stores/new",
     autheticationMW(objectRepository),
     getOneStoreMW(objectRepository),
-    renderMW(objectRepository,"store_add.html")
-    );
-    app.POST('/stores/new',
+    renderMW(objectRepository, "store_add")
+  );
+  app.post(
+    "/stores/new",
     autheticationMW(objectRepository),
-    saveStoreMW(objectRepository),
-    );
-    //------------------------------
+    saveStoreMW(objectRepository)
+  );
+  //------------------------------
 };

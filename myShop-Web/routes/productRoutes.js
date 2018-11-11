@@ -10,51 +10,59 @@ const saveProductMW = require("../middlewares/products/saveProduct");
 
 module.exports = function(app) {
   const objectRepository = {};
-    //------------------------------
-    //Termékek listája
-    app.GET('/products/:storeId',
+  //------------------------------
+  //Termékek listája
+  app.get(
+    "/products/:storeId",
     autheticationMW(objectRepository),
     getAllProductMW(objectRepository),
-    renderMW(objectRepository,"stores.html")
-    );
-    //------------------------------
-    //Termékek közötti keresés 
-    app.GET('/products/:storeId/:searchedKeyword',
+    renderMW(objectRepository, "products")
+  );
+  //------------------------------
+  //Termékek közötti keresés
+  app.get(
+    "/products/:storeId/:searchedKeyword",
     autheticationMW(objectRepository),
     getSearchedProductsMW(objectRepository),
-    renderMW(objectRepository,"products.html")
-    );
-    //------------------------------
-    //Termék módosítása
-    app.GET('/products/:storeId/:productId/edit',
+    renderMW(objectRepository, "products")
+  );
+  //------------------------------
+  //Termék módosítása
+  app.get(
+    "/products/:storeId/:productId/edit",
     autheticationMW(objectRepository),
     getOneProductMW(objectRepository),
-    renderMW(objectRepository,"product_edit.html")
-    );
-    app.POST('/products/:storeId/:productId/edit',
+    renderMW(objectRepository, "product_edit")
+  );
+  app.post(
+    "/products/:storeId/:productId/edit",
     autheticationMW(objectRepository),
-    saveProductMW(objectRepository),
-    );
-    //------------------------------
-    //Termék törlése
-    app.GET('/products/:storeId/:productId/delete',
+    saveProductMW(objectRepository)
+  );
+  //------------------------------
+  //Termék törlése
+  app.get(
+    "/products/:storeId/:productId/delete",
     autheticationMW(objectRepository),
-    renderMW(objectRepository,"products.html")
-    );
-    app.POST('/products/:storeId/:productId/delete',
+    renderMW(objectRepository, "products")
+  );
+  app.post(
+    "/products/:storeId/:productId/delete",
     autheticationMW(objectRepository),
-    deleteProductMW(objectRepository),
-    );
-    //------------------------------
-    //Termék hozzáadása
-    app.GET('/products/:storeId/new',
+    deleteProductMW(objectRepository)
+  );
+  //------------------------------
+  //Termék hozzáadása
+  app.get(
+    "/products/:storeId/new",
     autheticationMW(objectRepository),
     getOneProductMW(objectRepository),
-    renderMW(objectRepository,"product_add.html")
-    );
-    app.POST('/products/:storeId/new',
+    renderMW(objectRepository, "product_add")
+  );
+  app.post(
+    "/products/:storeId/new",
     autheticationMW(objectRepository),
-    saveProductMW(objectRepository),
-    );
-    //------------------------------
+    saveProductMW(objectRepository)
+  );
+  //------------------------------
 };

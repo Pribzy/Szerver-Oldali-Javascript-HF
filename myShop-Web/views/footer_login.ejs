@@ -1,0 +1,29 @@
+<!-- end: content -->
+
+<script>
+    //  show and hide password to eyebutton click
+    function showHidePassword() {
+        var pass = document.getElementById("password");
+        var image = document.getElementById("img");
+        if (pass.value !== "") {
+            if (pass.type === "password") {
+                pass.type = "text";
+                image.src = "../images/ic_password_revealed.png";
+            } else {
+                pass.type = "password";
+                image.src = "../images/ic_password_hided.png";
+            }
+        }
+
+
+    }
+    /*//authentication on button click
+    document.getElementById("loginButton").onclick = function () {
+
+        location.href = "stores";
+
+    };*/
+</script>
+
+</body>
+</html>
