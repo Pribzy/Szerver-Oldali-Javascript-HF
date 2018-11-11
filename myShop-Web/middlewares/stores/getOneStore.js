@@ -1,3 +1,5 @@
+var requireOption = require("../common").requireOption;
+
 /**
  * Visszaadja az URL paraméterben megadott egy bolt adatait
  */

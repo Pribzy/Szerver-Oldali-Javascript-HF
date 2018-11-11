@@ -1,3 +1,5 @@
+var requireOption = require("../common").requireOption;
+
 /**
  * Visszatér a rendszer összes boltjával
  */
