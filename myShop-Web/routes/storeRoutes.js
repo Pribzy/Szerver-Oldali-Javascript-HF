@@ -8,8 +8,13 @@ const getOneStoreMW = require("../middlewares/stores/getOneStore");
 const getSearchedStoresMW = require("../middlewares/stores/getSearchedStores");
 const saveStoreMW = require("../middlewares/stores/saveStore");
 
+//Modellek
+var storeModel = require("../model/store");
+
 module.exports = function(app) {
-  const objectRepository = {};
+  const objectRepository = {
+    storeModel: storeModel
+  };
   //------------------------------
   //Boltok listája
   app.get(

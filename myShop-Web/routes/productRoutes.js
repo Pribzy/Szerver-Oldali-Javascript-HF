@@ -8,6 +8,9 @@ const getOneProductMW = require("../middlewares/products/getOneProduct");
 const getSearchedProductsMW = require("../middlewares/products/getSearchedProducts");
 const saveProductMW = require("../middlewares/products/saveProduct");
 
+//Modellek
+var storeModel = require("../model/store");
+
 module.exports = function(app) {
   const objectRepository = {};
   //------------------------------
