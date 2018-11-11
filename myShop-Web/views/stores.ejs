@@ -1,4 +1,4 @@
-<% include header_data %>
+<% include header_stores %>
 
  <header class="search-header element-shadow" id="search-header">
 
@@ -50,7 +50,7 @@
             </section>
         </section>
 
-        <button id="addButton" type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
+        <button  onclick="location.href = '/stores/new';" id="addButton" type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
             <i class="glyphicon glyphicon-plus"></i>
         </button>
     </header>
@@ -82,13 +82,13 @@
                     <td>7 db</td>
                     <td>
                         <div class="d-flex flex-row bd-highlight">
-                            <button id="detailsButton" type="button" class="details-button element-shadow " value="Submit">
+                            <button onclick="location.href = '/products/0';" id="detailsButton" type="button" class="details-button element-shadow " value="Submit">
                                 <span>
                                     SHOW
                                 </span>
                             </button>
 
-                            <button id="editButton" type="button" class="edit-button element-shadow" value="Submit">
+                            <button onclick="location.href = '/stores/0/edit';" id="editButton" type="button" class="edit-button element-shadow" value="Submit">
                                 <img src="../images/edit.png" class="button-img"
                                >
                             </button>
