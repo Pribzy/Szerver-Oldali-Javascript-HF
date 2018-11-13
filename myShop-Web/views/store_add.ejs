@@ -5,7 +5,7 @@
         <section class="title text-shadow">ADD STORE</section>
     </header>
 
-
+<form id="search" method = "POST">
     <article class="field">
         <section class="input-fields d-flex flex-row justify-content-center  align-items-center">
 
@@ -13,13 +13,13 @@
                 Name:
             </section>
             <section class="input-form ">
-                <form id="search">
+               
                     <div class="input-container">
-                        <input type="text" name="searchbar"  maxlength="24" id="search">
+                        <input type="text" name="storeName"  maxlength="24" id="search">
 
 
                     </div>
-                </form>
+               
             </section>
 
         </section>
@@ -32,13 +32,13 @@
                 City:
             </section>
             <section class="input-form ">
-                <form id="search">
+               
                     <div class="input-container">
-                        <input type="text" name="searchbar"  maxlength="24" id="search">
+                        <input type="text" name="storeCityName"  maxlength="24" id="search">
 
 
                     </div>
-                </form>
+               
             </section>
 
         </section>
@@ -51,13 +51,13 @@
                 Street:
             </section>
             <section class="input-form ">
-                <form id="search">
+                
                     <div class="input-container">
-                        <input type="text" name="searchbar"  maxlength="24" id="search">
+                        <input type="text" name="storeStreetName"  maxlength="24" id="search">
 
 
                     </div>
-                </form>
+               
             </section>
 
         </section>
@@ -70,13 +70,13 @@
                 Rating:
             </section>
             <section class="input-form ">
-                <form id="search">
+               
                     <div class="input-container">
-                        <input type="text" name="searchbar" maxlength="24" id="search">
+                        <input type="text" name="storeRating" maxlength="24" id="search">
 
 
                     </div>
-                </form>
+               
             </section>
 
 
@@ -140,9 +140,11 @@
 
         </section>
     </article>
+    </form>
     <article class="d-flex flex-row justify-content-center">
-        <button id="saveButton" type="button" class="button element-shadow" form="login" value="Submit"><span>ADD
-                </span></button>
+        <input id="saveButton" type="Submit" 
+        class="button element-shadow" form="search" value="Submit">
+       
     </article>
 
 <% include footer %>

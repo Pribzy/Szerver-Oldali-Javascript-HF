@@ -7,16 +7,15 @@ module.exports = function(objectrepository) {
   var storeModel = requireOption(objectrepository, "storeModel");
 
   return function(req, res, next) {
-    storeModel
-      .find({})
-      .populate("_assignedto")
-      .exec(function(err, results) {
-        if (err) {
-          return next(new Error("Error getting tasks"));
-        }
+    //lets find the user
+    storeModel.find({}, function(err, results) {
+      if (err) {
+        return next(err);
+      }
 
-        res.tpl.stores = results;
-        return next();
-      });
+      res.tpl.stores = results;
+      console.log("Result: " + results);
+      return next();
+    });
   };
 };

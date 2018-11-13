@@ -1,4 +1,4 @@
-<% include header_dataManipulate %>
+<%- include header_dataManipulate %>
 
 <header class="search-header element-shadow d-flex flex-row justify-content-between 
         align-items-center">
@@ -13,9 +13,10 @@
                 Name:
             </section>
             <section class="input-form ">
-                <form id="search">
+                <form id="search" method="POST">
                     <div class="input-container">
-                        <input type="text" name="searchbar"  maxlength="24" id="search">
+                        <input
+                        type="text" name="productName"  maxlength="24" id="search">
 
 
                     </div>
@@ -107,9 +108,9 @@
                         </section>
                     </article>
                     <article class="d-flex flex-row justify-content-center">
-                    <button id="saveButton" 
+                    <input id="saveButton" 
                     type="button" class="button element-shadow" 
-                    form="login" value="Submit"><span>ADD</span></button>
+                    form="search" value="Submit">
                 </article>
 
-<% include footer %>
+<%- include footer %>

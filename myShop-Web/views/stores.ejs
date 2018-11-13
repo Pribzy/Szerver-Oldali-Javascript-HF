@@ -59,7 +59,6 @@
         <table class="table table-striped">
             <thead class="columns">
                 <tr>
-                    <th scope="col">ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">City</th>
                     <th scope="col">Street</th>
@@ -72,11 +71,11 @@
             <tbody class="rows">
              <% stores.forEach(function(item){ %>
                 <tr>
-                    <th scope="row">0</th>
-                    <td>Lidl</td>
-                    <td>Budapest</td>
-                    <td>Szupi utca 7.</td>
-                    <td class="row-rate">4.7</td>
+                  
+                    <td><%= item.name %></td>
+                    <td><%= item.city %></td>
+                    <td><%= item.street %></td>
+                    <td class="row-rate"><%= item.rating %></td>
                     <td>
                         <img src="../images/ic_groceries.png" class="row-img">
                     </td>
