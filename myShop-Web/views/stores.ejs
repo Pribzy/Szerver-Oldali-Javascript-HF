@@ -32,7 +32,7 @@
                         </section>
 
                         <section class="detail-title">
-                            (15 stores)
+                            (<%= stores.lenght %> stores)
                         </section>
 
                     </section>
@@ -88,10 +88,10 @@
                                 </span>
                             </button>
 
-                            <button onclick="location.href = '/stores/0/edit';" id="editButton" type="button" class="edit-button element-shadow" value="Submit">
-                                <img src="../images/edit.png" class="button-img"
-                               >
-                            </button>
+                            <a href = "/stores/<%= item.id %>/edit" id="editButton" class="edit-button element-shadow">
+                                <img src="../images/edit.png" class="button-img" >
+                               
+                            </a>
                             <button id="deleteButton" type="button" class="button-border delete-button element-shadow"value="Submit">
                                 <img src="../images/trash.png" class="button-img">
                             </button>

@@ -15,7 +15,7 @@ module.exports = function(objectrepository) {
         return next(err);
       }
 
-      // return res.redirect("/stores/" + res.tpl.store.id);
+      return res.redirect("/stores");
     });
   }
 
@@ -26,6 +26,7 @@ module.exports = function(objectrepository) {
 
     var store = undefined;
     if (typeof res.tpl.store !== "undefined") {
+      console.log("Létezik");
       store = res.tpl.store;
       store.name = req.body.storeName;
       store.street = req.body.storeStreetName;
@@ -34,13 +35,13 @@ module.exports = function(objectrepository) {
 
       return saveCallback(res, next, store);
     } else {
+      console.log("Nem étezik");
       store = new storeModel();
       store.name = req.body.storeName;
       store.street = req.body.storeStreetName;
       store.city = req.body.storeCityName;
       store.rating = req.body.storeRating;
 
-      console.log("New Store: " + store);
       return saveCallback(res, next, store);
     }
 
