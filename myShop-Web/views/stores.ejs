@@ -1,4 +1,4 @@
-<% include header_stores %>
+<%- include header_stores %>
 
  <header class="search-header element-shadow" id="search-header">
 
@@ -70,6 +70,7 @@
                 </tr>
             </thead>
             <tbody class="rows">
+             <% stores.forEach(function(item){ %>
                 <tr>
                     <th scope="row">0</th>
                     <td>Lidl</td>
@@ -98,7 +99,7 @@
                         </div>
                     </td>
                 </tr>
-                
+                <% }); %>
             </tbody>
         </table>
 

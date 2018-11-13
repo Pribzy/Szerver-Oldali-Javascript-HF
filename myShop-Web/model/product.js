@@ -9,4 +9,4 @@ var Product = db.model('Product', {
   price:Number
 });
 
-module.exports = Products;
+module.exports = Product;

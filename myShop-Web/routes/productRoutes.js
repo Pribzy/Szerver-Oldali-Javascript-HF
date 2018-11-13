@@ -24,6 +24,19 @@ module.exports = function(app) {
     renderMW(objectRepository, "products")
   );
   //------------------------------
+  //Termék hozzáadása
+  app.get(
+    "/products/:storeId/new",
+    autheticationMW(objectRepository),
+    getOneProductMW(objectRepository),
+    renderMW(objectRepository, "product_add")
+  );
+  app.post(
+    "/products/:storeId/new",
+    autheticationMW(objectRepository),
+    saveProductMW(objectRepository)
+  );
+  //------------------------------
   //Termékek közötti keresés
   app.get(
     "/products/:storeId/:searchedKeyword",
@@ -55,19 +68,6 @@ module.exports = function(app) {
     "/products/:storeId/:productId/delete",
     autheticationMW(objectRepository),
     deleteProductMW(objectRepository)
-  );
-  //------------------------------
-  //Termék hozzáadása
-  app.get(
-    "/products/:storeId/new",
-    autheticationMW(objectRepository),
-    getOneProductMW(objectRepository),
-    renderMW(objectRepository, "product_add")
-  );
-  app.post(
-    "/products/:storeId/new",
-    autheticationMW(objectRepository),
-    saveProductMW(objectRepository)
   );
   //------------------------------
 };

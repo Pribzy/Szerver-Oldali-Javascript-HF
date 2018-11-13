@@ -13,4 +13,4 @@ var Store = db.model('Store', {
   }
 });
 
-module.exports = Stores;
+module.exports = Store;
