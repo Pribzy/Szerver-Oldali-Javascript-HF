@@ -6,11 +6,7 @@ var Store = db.model('Store', {
   city: String,
   street: String,
   rating: Number,
-  type: String,
-  _product: {
-    type: Schema.Types.ObjectId,
-    ref: 'Product'
-  }
+  type: String
 });
 
 module.exports = Store;
