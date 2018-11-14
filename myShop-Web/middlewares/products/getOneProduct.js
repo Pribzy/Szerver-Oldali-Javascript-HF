@@ -13,7 +13,7 @@ module.exports = function(objectrepository) {
       },
       function(err, result) {
         if (err || !result) {
-          //return res.redirect("/products/" + req.param("storeId") + "/edit");
+          return res.redirect("/products/" + req.param("storeId") +"/"+req.param("productId")+ "/edit");
         }
 
         res.tpl.product = result;

@@ -6,11 +6,11 @@
 
             <section class="store-details" id="store-details">
 
-                <div class="store-name">Bolt név</div>
+                <div class="store-name"><%= store.name %></div>
                 <hr class="horizontal-line">
-                <div class="store-city">Budapest</div>
+                <div class="store-city"><%= store.city %></div>
                 <hr class="horizontal-line">
-                <div class="store-street">Szupi utca 7.</div>
+                <div class="store-street"><%= store.street %></div>
             </section>
             <section class="search-module d-flex flex-column justify-content-between flex-grow-1">
 
@@ -38,13 +38,13 @@
                         </section>
 
                         <section class="detail-title">
-                            (1463 products)
+                                <%= products.lenght %>
                         </section>
 
                     </section>
 
                     <section>
-                        <button onclick="location.href = '/products/<%= products[0]._store %>/new';" id="addButton" type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
+                        <button onclick="location.href = '/products/<%= store.id %>/new';" id="addButton" type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
 
@@ -88,12 +88,12 @@
                         <div class="d-flex flex-row bd-highlight">
 
                             <button id="editButton" type="button" class="edit-button element-shadow" value="Submit"
-                             onclick="location.href = '/products/<%= item._store %>/<%= item.id %>/edit';">
+                             onclick="location.href = '/products/<%= store.id %>/<%= item.id %>/edit';">
                                 <img src="../images/edit.png" class="button-img">
                             </button>
                             <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
                                 value="Submit"
-                                onclick="location.href = '/products/<%= item._store %>/<%= item.id %>/delete';">
+                                onclick="location.href = '/products/<%= store.id %>/<%= item.id %>/delete';">
                                 <img src="../images/trash.png" class="button-img">
                             </button>
 

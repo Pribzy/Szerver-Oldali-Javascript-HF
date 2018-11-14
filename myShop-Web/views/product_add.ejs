@@ -5,7 +5,7 @@
         <section class="title text-shadow">ADD PRODUCT</section>
     </header>
 
-
+    <form id="search" method="POST">
     <article class="field">
         <section class="input-fields d-flex flex-row justify-content-center  align-items-center">
 
@@ -13,14 +13,14 @@
                 Name:
             </section>
             <section class="input-form ">
-                <form id="search" method="POST">
+               
                     <div class="input-container">
                         <input
                         type="text" name="productName"  maxlength="24" id="search">
 
 
                     </div>
-                </form>
+                
             </section>
 
         </section>
@@ -33,13 +33,13 @@
                     Type:
                 </section>
                 <section class="input-form ">
-                    <form id="search">
+                  
                         <div class="input-container">
-                            <input type="text" name="searchbar"  maxlength="24" id="search">
+                            <input type="text" name="productType"  maxlength="24" id="search">
     
     
                         </div>
-                    </form>
+                    
                 </section>
                 
             </section>
@@ -52,13 +52,13 @@
                         Subtype:
                     </section>
                     <section class="input-form ">
-                        <form id="search">
+                       
                             <div class="input-container">
-                                <input type="text" name="searchbar"  maxlength="24" id="search">
+                                <input type="text" name="productSubType"  maxlength="24" id="search">
         
         
                             </div>
-                        </form>
+                        
                     </section>
                     
                 </section>
@@ -71,13 +71,13 @@
                             Serving:
                         </section>
                         <section class="input-form ">
-                            <form id="search">
+                           
                                 <div class="input-container">
-                                    <input type="text" name="searchbar"  maxlength="24" id="search">
+                                    <input type="text" name="productServing"  maxlength="24" id="search">
             
             
                                 </div>
-                            </form>
+                           
                         </section>
                         <section class="label">
                                g
@@ -93,13 +93,13 @@
                                 Price:
                             </section>
                             <section class="input-form ">
-                                <form id="search">
+                              
                                     <div class="input-container">
-                                        <input type="text" name="searchbar"  maxlength="24" id="search">
+                                        <input type="text" name="productPrice"  maxlength="24" id="search">
                 
                 
                                     </div>
-                                </form>
+                                
                             </section>
                             <section class="label">
                                     Ft
@@ -107,9 +107,10 @@
                             
                         </section>
                     </article>
+            </form>
                     <article class="d-flex flex-row justify-content-center">
                     <input id="saveButton" 
-                    type="button" class="button element-shadow" 
+                    type="Submit" class="button element-shadow" 
                     form="search" value="Submit">
                 </article>
 

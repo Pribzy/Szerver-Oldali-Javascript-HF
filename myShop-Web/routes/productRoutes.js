@@ -5,21 +5,25 @@ const renderMW = require("../middlewares/generic/render");
 const deleteProductMW = require("../middlewares/products/deleteProduct");
 const getAllProductMW = require("../middlewares/products/getAllProduct");
 const getOneProductMW = require("../middlewares/products/getOneProduct");
+const getOneStoreMW = require("../middlewares/stores/getOneStore");
 const getSearchedProductsMW = require("../middlewares/products/getSearchedProducts");
 const saveProductMW = require("../middlewares/products/saveProduct");
 
 //Modellek
 var productModel = require("../model/product");
+var storeModel = require("../model/store");
 
 module.exports = function(app) {
   const objectRepository = {
-    productModel: productModel
+    productModel: productModel,
+    storeModel: storeModel
   };
   //------------------------------
   //Termékek listája
   app.get(
     "/products/:storeId",
     autheticationMW(objectRepository),
+    getOneStoreMW(objectRepository),
     getAllProductMW(objectRepository),
     renderMW(objectRepository, "products")
   );
@@ -42,7 +46,7 @@ module.exports = function(app) {
   app.get(
     "/products/:storeId/new",
     autheticationMW(objectRepository),
-    //getOneProductMW(objectRepository),
+    getOneStoreMW(objectRepository),
     renderMW(objectRepository, "product_add")
   );
   app.post(
