@@ -42,7 +42,7 @@ module.exports = function(app) {
   app.get(
     "/products/:storeId/new",
     autheticationMW(objectRepository),
-    getOneProductMW(objectRepository),
+    //getOneProductMW(objectRepository),
     renderMW(objectRepository, "product_add")
   );
   app.post(

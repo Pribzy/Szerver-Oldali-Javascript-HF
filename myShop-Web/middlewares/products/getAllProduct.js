@@ -16,6 +16,8 @@ module.exports = function (objectrepository) {
       }
 
       res.tpl.products = results;
+
+      
       console.log("Products: " + results);
       return next();
     });

@@ -6,7 +6,7 @@
 
             <section class="store-details" id="store-details">
 
-                <div class="store-name">LIDL</div>
+                <div class="store-name">Bolt név</div>
                 <hr class="horizontal-line">
                 <div class="store-city">Budapest</div>
                 <hr class="horizontal-line">
@@ -44,7 +44,7 @@
                     </section>
 
                     <section>
-                        <button onclick="location.href = '/products/new';" id="addButton" type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
+                        <button onclick="location.href = '/products/<%= products[0]._store %>/new';" id="addButton" type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
 
@@ -76,7 +76,7 @@
             </thead>
             <tbody class="rows">
                     <% products.forEach(function(item){ %>
-                        
+
                 <tr>
                     
                     <td><%= item.name %></td>
@@ -88,11 +88,12 @@
                         <div class="d-flex flex-row bd-highlight">
 
                             <button id="editButton" type="button" class="edit-button element-shadow" value="Submit"
-                             onclick="location.href = '/products/0/0/edit';">
+                             onclick="location.href = '/products/<%= item._store %>/<%= item.id %>/edit';">
                                 <img src="../images/edit.png" class="button-img">
                             </button>
                             <button id="deleteButton" type="button" class="button-border delete-button element-shadow"
-                                value="Submit">
+                                value="Submit"
+                                onclick="location.href = '/products/<%= item._store %>/<%= item.id %>/delete';">
                                 <img src="../images/trash.png" class="button-img">
                             </button>
 

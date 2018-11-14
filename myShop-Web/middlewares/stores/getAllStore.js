@@ -13,8 +13,8 @@ module.exports = function(objectrepository) {
         return next(err);
       }
 
-      res.tpl.stores = results;
-      console.log("Result: " + results);
+      res.tpl.stores = results; 
+     
       return next();
     });
   };
