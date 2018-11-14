@@ -28,22 +28,12 @@ module.exports = function(app) {
   app.get(
     "/stores/new",
     autheticationMW(objectRepository),
-    getOneStoreMW(objectRepository),
     renderMW(objectRepository, "store_add")
   );
   app.post(
     "/stores/new",
     autheticationMW(objectRepository),
     saveStoreMW(objectRepository)
-  );
-
-  //------------------------------
-  //Boltok közötti keresés
-  app.get(
-    "/stores/:searchedKeyword",
-    autheticationMW(objectRepository),
-    getSearchedStoresMW(objectRepository),
-    renderMW(objectRepository, "stores")
   );
   //------------------------------
   //Bolt módosítása
@@ -59,16 +49,26 @@ module.exports = function(app) {
     saveStoreMW(objectRepository)
   );
   //------------------------------
-  //Bolt törlése
+  //Boltok közötti keresés
   app.get(
-    "/stores/:storeId/delete",
+    "/stores/:searchedKeyword",
     autheticationMW(objectRepository),
+    getSearchedStoresMW(objectRepository),
     renderMW(objectRepository, "stores")
   );
-  app.post(
+
+  //------------------------------
+  //Bolt törlése
+  app.use(
     "/stores/:storeId/delete",
     autheticationMW(objectRepository),
-    deleteStoreMW(objectRepository)
+    getOneStoreMW(objectRepository),
+    deleteStoreMW(objectRepository),
+    function(req, res, next) {
+      return res.redirect("/stores");
+    }
+    //renderMW(objectRepository, "stores")
   );
+
   //------------------------------
 };

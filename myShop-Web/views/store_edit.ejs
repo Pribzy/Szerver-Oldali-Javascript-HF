@@ -2,7 +2,7 @@
 
  <header class="search-header element-shadow d-flex flex-row justify-content-between 
         align-items-center">
-        <section class="title text-shadow">ADD STORE</section>
+        <section class="title text-shadow">EDIT STORE</section>
     </header>
 
 <form id="search" method = "POST">
@@ -35,7 +35,7 @@
             <section class="input-form ">
                
                     <div class="input-container">
-                        <input type="text" name="storeCityName"  maxlength="24" id="search">
+                        <input type="text" name="storeCityName"  maxlength="24" id="search"  value="<%= store.city %>">
 
 
                     </div>
@@ -54,7 +54,7 @@
             <section class="input-form ">
                 
                     <div class="input-container">
-                        <input type="text" name="storeStreetName"  maxlength="24" id="search">
+                        <input type="text" name="storeStreetName"  maxlength="24" id="search"  value="<%= store.street %>">
 
 
                     </div>
@@ -73,7 +73,7 @@
             <section class="input-form ">
                
                     <div class="input-container">
-                        <input type="text" name="storeRating" maxlength="24" id="search">
+                        <input type="text" name="storeRating" maxlength="24" id="search"  value="<%= store.rating %>">
 
 
                     </div>
