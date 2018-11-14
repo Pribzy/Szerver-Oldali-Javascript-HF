@@ -65,7 +65,7 @@
         <table class="table table-striped">
             <thead class="columns">
                 <tr>
-                    <th scope="col">ID</th>
+                    
                     <th scope="col">Name</th>
                     <th scope="col">Type</th>
                     <th scope="col">Subtype</th>
@@ -75,15 +75,17 @@
                 </tr>
             </thead>
             <tbody class="rows">
+                    <% products.forEach(function(item){ %>
                 <tr>
-                    <th scope="row">0</th>
-                    <td>Kenyér</td>
-                    <td>Pékáru</td>
-                    <td>Kenyér</td>
-                    <td>500</td>
-                    <td>399</td>
+                    
+                    <td><%= item.name %></td>
+                    <td><%= item.type %></td>
+                    <td><%= item.subType %></td>
+                    <td><%= item.servingValue %></td>
+                    <td><%= item.price %></td>
                     <td>
                         <div class="d-flex flex-row bd-highlight">
+
                             <button id="editButton" type="button" class="edit-button element-shadow" value="Submit"
                              onclick="location.href = '/products/0/0/edit';">
                                 <img src="../images/edit.png" class="button-img">
@@ -92,10 +94,11 @@
                                 value="Submit">
                                 <img src="../images/trash.png" class="button-img">
                             </button>
+
                         </div>
                     </td>
                 </tr>
-               
+                <% }); %>
 
             </tbody>
         </table>

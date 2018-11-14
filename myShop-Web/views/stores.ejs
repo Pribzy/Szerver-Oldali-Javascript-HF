@@ -82,7 +82,7 @@
                     <td>7 db</td>
                     <td>
                         <div class="d-flex flex-row bd-highlight">
-                            <button onclick="location.href = '/products/0';" id="detailsButton" type="button" class="details-button element-shadow " value="Submit">
+                            <button onclick="location.href = '/products/<%= item.id %>';" id="detailsButton" type="button" class="details-button element-shadow " value="Submit">
                                 <span>
                                     SHOW
                                 </span>
@@ -92,7 +92,7 @@
                                 <img src="../images/edit.png" class="button-img" >
                                
                             </a>
-                            <a href = "/stores/<%= item.id %>/delete" id="deleteButton" type="button" class="button-border delete-button element-shadow"value="Submit">
+                            <button onclick="location.href = '/stores/<%= item.id %>/delete';" id="deleteButton" type="button" class="button-border delete-button element-shadow"value="Submit">
                                 <img src="../images/trash.png" class="button-img">
                             </a>
                         </div>

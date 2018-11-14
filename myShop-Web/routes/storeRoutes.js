@@ -64,10 +64,7 @@ module.exports = function(app) {
     autheticationMW(objectRepository),
     getOneStoreMW(objectRepository),
     deleteStoreMW(objectRepository),
-    function(req, res, next) {
-      return res.redirect("/stores");
-    }
-    //renderMW(objectRepository, "stores")
+    renderMW(objectRepository, "stores")
   );
 
   //------------------------------
