@@ -14,7 +14,7 @@ module.exports = function(objectrepository) {
       }
 
       res.tpl.stores = results;
-      res.tpl.count = results.length;
+      res.tpl.storeCount = results.length;
 
       return next();
     });

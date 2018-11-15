@@ -6,7 +6,8 @@ var Store = db.model("Store", {
   city: String,
   street: String,
   rating: Number,
-  type: String
+  type: String,
+  productCount: Number
 });
 
 module.exports = Store;

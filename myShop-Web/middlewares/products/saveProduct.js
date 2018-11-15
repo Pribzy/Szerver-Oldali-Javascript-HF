@@ -46,7 +46,13 @@ module.exports = function(objectrepository) {
       product.price = req.body.productPrice;
       storeModel.findById(req.param("storeId"), function(err, store) {
         product._store = store.id;
-        console.log(product);
+        //Save store
+        store.productCount = store.productCount + 1;
+        store.save(function(err, result) {
+          if (err) {
+            return next(err);
+          }
+        });
         return saveCallback(req, res, next, product);
       });
     }

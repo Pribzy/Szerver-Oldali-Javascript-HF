@@ -41,6 +41,7 @@ module.exports = function(objectrepository) {
       store.street = req.body.storeStreetName;
       store.city = req.body.storeCityName;
       store.rating = req.body.storeRating;
+      store.productCount = 0;
 
       return saveCallback(res, next, store);
     }
