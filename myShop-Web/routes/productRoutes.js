@@ -63,7 +63,7 @@ module.exports = function(app) {
     renderMW(objectRepository, "products")
   );
   //------------------------------
-  
+
   //Termék törlése
   app.use(
     "/products/:storeId/:productId/delete",

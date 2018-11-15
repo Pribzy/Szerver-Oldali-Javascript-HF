@@ -46,6 +46,7 @@ module.exports = function(app) {
   app.post(
     "/stores/:storeId/edit",
     autheticationMW(objectRepository),
+    getOneStoreMW(objectRepository),
     saveStoreMW(objectRepository)
   );
   //------------------------------

@@ -26,7 +26,7 @@ module.exports = function(objectrepository) {
 
     var store = undefined;
     if (typeof res.tpl.store !== "undefined") {
-      console.log("Létezik");
+      console.log("Létezik:" + res.tpl.store);
       store = res.tpl.store;
       store.name = req.body.storeName;
       store.street = req.body.storeStreetName;
