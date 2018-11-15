@@ -12,9 +12,9 @@ module.exports = function(objectrepository) {
       if (err) {
         return next(err);
       }
-      console.log("Boltok száma: " + results.count);
+
       res.tpl.stores = results;
-      res.tpl.count = storeModel.count;
+      res.tpl.count = results.length;
 
       return next();
     });
