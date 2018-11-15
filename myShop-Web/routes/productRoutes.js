@@ -32,12 +32,14 @@ module.exports = function(app) {
   app.get(
     "/products/:storeId/:productId/edit",
     autheticationMW(objectRepository),
+    getOneStoreMW(objectRepository),
     getOneProductMW(objectRepository),
     renderMW(objectRepository, "product_edit")
   );
   app.post(
     "/products/:storeId/:productId/edit",
     autheticationMW(objectRepository),
+    getOneProductMW(objectRepository),
     saveProductMW(objectRepository)
   );
 
