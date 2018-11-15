@@ -71,6 +71,7 @@ module.exports = function(app) {
     "/products/:storeId/:productId/delete",
     autheticationMW(objectRepository),
     getOneProductMW(objectRepository),
+    getOneStoreMW(objectRepository),
     deleteProductMW(objectRepository),
     renderMW(objectRepository, "products")
   );

@@ -16,20 +16,20 @@
         </section>
         <section class ="login-form">
                
-                <form id="login">
+                <form id="login" method ="POST">
                        <div class ="input-container">
-                                <input type="text" name="username" placeholder="Username"
-                                maxlength="10" id="username">
+                                <input type="text" name="userName" placeholder="mjqef1"
+                                maxlength="10" id="username" value="mjqef1">
                               
                         </div>
                         <div class ="input-container">
-                                <input type="password" name="password" placeholder="Password"
-                                id ="password">
+                                <input type="password" name="password" placeholder="mjqef1"
+                                id ="password" value = "mjqef1">
                                <img src="../images/ic_password_hided.png" class="img password-reveal" id="img">
                         </div>
                         
                 </form>
-                <button  onclick="location.href = 'stores';" id="loginButton" type="button" class="button element-shadow" form="login" value="Submit"><span>Login </span></button>
+                <input id="loginButton" type="Submit" class="button element-shadow" form="login" value="Belépés">
                        
                         
             
@@ -37,6 +37,8 @@
             
        </section>
     </section>
+
+    
     
     <% include footer_login %>
     
