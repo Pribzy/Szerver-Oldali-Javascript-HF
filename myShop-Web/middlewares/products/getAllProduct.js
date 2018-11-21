@@ -16,7 +16,7 @@ module.exports = function (objectrepository) {
       }
 
       res.tpl.products = results;
-
+      res.tpl.productCount = results.length;
       
       console.log("Products: " + results);
       return next();
