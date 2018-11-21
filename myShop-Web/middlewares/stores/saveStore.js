@@ -19,6 +19,27 @@ module.exports = function(objectrepository) {
     });
   }
 
+  function setShopType(req, store) {
+    if (req.body.type === "meat") {
+      store.type = "Meat";
+    }
+    if (req.body.type === "electronic") {
+      store.type = "Electronic";
+    }
+    if (req.body.type === "groceries") {
+      store.type = "Groceries";
+    }
+    if (req.body.type === "fish") {
+      store.type = "Fish";
+    }
+    if (req.body.type === "bread") {
+      store.type = "Bread";
+    }
+    if (req.body.type === "vegetable") {
+      store.type = "Vegetable";
+    }
+  }
+
   return function(req, res, next) {
     if (typeof req.body.storeName === "undefined") {
       return next();
@@ -32,6 +53,8 @@ module.exports = function(objectrepository) {
       store.street = req.body.storeStreetName;
       store.city = req.body.storeCityName;
       store.rating = req.body.storeRating;
+      //Set Shop Type
+      setShopType(req, store);
 
       return saveCallback(res, next, store);
     } else {
@@ -42,6 +65,9 @@ module.exports = function(objectrepository) {
       store.city = req.body.storeCityName;
       store.rating = req.body.storeRating;
       store.productCount = 0;
+
+      //Set Shop Type
+      setShopType(req, store);
 
       return saveCallback(res, next, store);
     }
