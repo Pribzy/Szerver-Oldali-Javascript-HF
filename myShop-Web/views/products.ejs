@@ -44,8 +44,16 @@
                     </section>
 
                     <section>
+
+                    <button id="logoutButton" type="button" class="btn btn-light"  onclick="location.href = '/logout';">Log Out</button>
+
+
                         <button onclick="location.href = '/products/<%= store.id %>/new';" id="addButton" type="button" class="btn btn-info btn-circle btn-xl" value="Submit">
                             <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+
+                        <button onclick="location.href = '/stores';" id="backButton" type="button" class="btn btn-light" value="Submit">
+                          	<i class="glyphicon glyphicon-chevron-left"></i>
                         </button>
 
 

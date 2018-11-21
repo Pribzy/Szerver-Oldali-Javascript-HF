@@ -22,6 +22,9 @@ module.exports = function(app) {
   app.get(
     "/logout",
     autheticationMW(objectRepository),
-    logoutMW(objectRepository)
+    logoutMW(objectRepository),
+    function(req, res, next){
+      res.redirect('/');
+    }
   );
 };
