@@ -23,6 +23,14 @@ module.exports = function(app) {
     getAllStoreMW(objectRepository),
     renderMW(objectRepository, "stores")
   );
+  app.post(
+    "/stores",
+    autheticationMW(objectRepository),
+    function(req, res, next) {
+      res.redirect("/stores/search/"+req.body.searchbar);
+    }
+    
+  );
   //------------------------------
   //Bolt hozzáadása
   app.get(
@@ -52,10 +60,17 @@ module.exports = function(app) {
   //------------------------------
   //Boltok közötti keresés
   app.get(
-    "/stores/:searchedKeyword",
+    "/stores/search/:searchedKeyword",
     autheticationMW(objectRepository),
     getSearchedStoresMW(objectRepository),
-    renderMW(objectRepository, "stores")
+    renderMW(objectRepository, "searched_stores")
+  );
+  app.post(
+    "/stores/search/:searchedKeyword",
+    autheticationMW(objectRepository),
+    function(req, res, next) {
+      res.redirect("/stores/search/"+req.body.searchbar);
+    }
   );
 
   //------------------------------

@@ -27,6 +27,14 @@ module.exports = function(app) {
     getAllProductMW(objectRepository),
     renderMW(objectRepository, "products")
   );
+  app.post(
+    "/products/:storeId",
+    autheticationMW(objectRepository),
+    getOneStoreMW(objectRepository),
+    function(req, res, next) {
+      res.redirect("/products/"+req.param("storeId")+"/search/"+req.body.searchbar);
+    }
+  );
   //------------------------------
   //Termék módosítása
   app.get(
@@ -59,10 +67,19 @@ module.exports = function(app) {
   //------------------------------
   //Termékek közötti keresés
   app.get(
-    "/products/:storeId/:searchedKeyword",
+    "/products/:storeId/search/:searchedKeyword",
     autheticationMW(objectRepository),
+    getOneStoreMW(objectRepository),
     getSearchedProductsMW(objectRepository),
-    renderMW(objectRepository, "products")
+    renderMW(objectRepository, "searched_products")
+  );
+  app.post(
+    "/products/:storeId/search/:searchedKeyword",
+    autheticationMW(objectRepository),
+    getOneStoreMW(objectRepository),
+    function(req, res, next) {
+      res.redirect("/products/"+req.param("storeId")+"/search/"+req.body.searchbar);
+    }
   );
   //------------------------------
 
