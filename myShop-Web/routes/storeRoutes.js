@@ -28,6 +28,7 @@ module.exports = function(app) {
     autheticationMW(objectRepository),
     function(req, res, next) {
       res.redirect("/stores/search/"+req.body.searchbar);
+      return next();
     }
     
   );
