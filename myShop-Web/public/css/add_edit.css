@@ -46,6 +46,7 @@ header{
 }
 
 .input-form input[type="text"],
+.input-form input[type="number"],
 .input-form select {
    
     font-family: Montserrat-Bold;

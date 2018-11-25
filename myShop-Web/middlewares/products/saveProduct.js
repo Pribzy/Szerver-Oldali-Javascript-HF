@@ -35,6 +35,8 @@ module.exports = function(objectrepository) {
       product.servingValue = req.body.productServing;
       product.price = req.body.productPrice;
 
+
+
       return saveCallback(req, res, next, product);
     } else {
       console.log("Nem étezik");

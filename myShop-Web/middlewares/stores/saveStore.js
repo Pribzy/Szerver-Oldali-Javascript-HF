@@ -53,10 +53,15 @@ module.exports = function(objectrepository) {
       store.street = req.body.storeStreetName;
       store.city = req.body.storeCityName;
       store.rating = req.body.storeRating;
+
+     console.log(typeof store.rating);
+       
+     
       //Set Shop Type
       setShopType(req, store);
 
       return saveCallback(res, next, store);
+      
     } else {
       console.log("Nem étezik");
       store = new storeModel();

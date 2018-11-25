@@ -13,7 +13,7 @@ var requireOption = require("../common").requireOption;
       var searchedKeyword = req.param("searchedKeyword")
       console.log(searchedKeyword)
       //lets find the user
-    storeModel.find({"name" : {$regex: ".*" + searchedKeyword + ".*"}},function(err, results) {
+    storeModel.find({"name" : {$regex: new RegExp(".*" + searchedKeyword + ".*","i")}},function(err, results) {
       //storeModel.find({"name" : {/.*searchedKeyword.*/}},function(err, results) {
       
         if (err) {
@@ -22,6 +22,7 @@ var requireOption = require("../common").requireOption;
         
         res.tpl.stores = results;
         res.tpl.storeCount = results.length;
+        res.tpl.searchedWord = searchedKeyword;
         
         return next();
       });

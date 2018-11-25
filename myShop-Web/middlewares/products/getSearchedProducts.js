@@ -11,7 +11,7 @@ module.exports = function (objectrepository) {
     var searchedKeyword = req.param("searchedKeyword")
    
     //lets find the user
-    productModel.find({"name" : {$regex: ".*" + searchedKeyword + ".*"} ,
+    productModel.find({"name" : {$regex: new RegExp(".*" + searchedKeyword + ".*","i")} ,
     _store: req.param('storeId')
     
     }).populate('_product').exec(function (err, results) {
@@ -21,7 +21,8 @@ module.exports = function (objectrepository) {
      
       res.tpl.products = results;
       res.tpl.productCount = results.length;
-      
+      res.tpl.searchedWord = searchedKeyword;
+
       console.log("Products: " + results);
       return next();
     });
