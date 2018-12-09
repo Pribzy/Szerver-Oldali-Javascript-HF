@@ -7,7 +7,7 @@ module.exports = function(objectrepository) {
   var storeModel = requireOption(objectrepository, "storeModel");
 
   return function(req, res, next) {
-    //lets find the user
+    
     storeModel.find({}, function(err, results) {
       if (err) {
         return next(err);
