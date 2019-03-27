@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /**((()))
+=======
+/*
+>>>>>>> master
  * Load a dependency from an object repository
  * @param objectRepository object repository
  * @param propertyName dependency name
